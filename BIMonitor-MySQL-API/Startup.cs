@@ -49,8 +49,14 @@ namespace BIMonitor_MySQL_API
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                // Add this for production error handling
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
