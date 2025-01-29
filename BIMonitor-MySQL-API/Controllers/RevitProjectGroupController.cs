@@ -75,8 +75,8 @@ namespace BIMonitor_MySQL_API.Controllers
         [HttpPost]
         public int Post(RevitProjectGroup revitProjectGroup)
         {
-            string query = @"INSERT into revitprojectgroup(name,thumbnailPath,lastEdited,userId) 
-                             VALUES (@name, @thumbnailPath, @lastEdited, @userId);
+            string query = @"INSERT into revitprojectgroup(name,thumbnailPath,lastEdited,userId,isDeleted) 
+                             VALUES (@name, @thumbnailPath, @lastEdited, @userId, 0);
                              SELECT LAST_INSERT_ID();";
 
             DataTable table = new DataTable();

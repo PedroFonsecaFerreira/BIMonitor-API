@@ -140,7 +140,8 @@ namespace BIMonitor_MySQL_API.Controllers
                                                      isAllParameters = @isAllParameters,
                                                      revitProjectGroupId = @revitProjectGroupId,
                                                      taskElementsParametersCsvLocalPath = @taskElementsParametersCsvLocalPath,
-                                                     taskTimelinersCsvLocalPath = @taskTimelinersCsvLocalPath
+                                                     taskTimelinersCsvLocalPath = @taskTimelinersCsvLocalPath,
+                                                     isDeleted = 0
                             where revitProjectId=@id";
 
             DataTable table = new DataTable();

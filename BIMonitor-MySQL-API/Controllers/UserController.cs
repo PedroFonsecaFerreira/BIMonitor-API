@@ -105,7 +105,7 @@ namespace BIMonitor_MySQL_API.Controllers
         [HttpPost]
         public JsonResult Post(User user)
         {
-            string query = @"insert into user(username,hashedPassword,saltPassword,hashedEmail,organization,activated) values (@username, @hashedPassword, @saltPassword, @hashedEmail, @organization, @activated);";
+            string query = @"insert into user(username,hashedPassword,saltPassword,hashedEmail,organization,activated, isDeleted) values (@username, @hashedPassword, @saltPassword, @hashedEmail, @organization, @activated, 0);";
 
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("BIMonitorCon");
