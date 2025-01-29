@@ -49,8 +49,18 @@ namespace BIMonitor_MySQL_API
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                // Add this for production error handling
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
 
+<<<<<<< HEAD
             //app.UseHttpsRedirection();
+=======
+            // app.UseHttpsRedirection();
+>>>>>>> b22721f (changes and updates to allow deploy to vm with http for now)
 
             app.UseRouting();
 
