@@ -56,11 +56,7 @@ namespace BIMonitor_MySQL_API
                 app.UseHsts();
             }
 
-<<<<<<< HEAD
-            //app.UseHttpsRedirection();
-=======
             // app.UseHttpsRedirection();
->>>>>>> b22721f (changes and updates to allow deploy to vm with http for now)
 
             app.UseRouting();
 
